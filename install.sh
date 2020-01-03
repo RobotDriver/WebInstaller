@@ -23,6 +23,7 @@ apt install -y git gcc g++ make pigpio
 
 git clone https://github.com/RobotDriver/RobotDriver $INSTALLDIR
 
+npm config set unsafe-perm true
 npm install --prefix $INSTALLDIR
 
 JSDIR=$INSTALLDIR/webroot/inc/js/
