@@ -6,6 +6,8 @@
 # Make sure you have `curl` installed
 set -eu
 
+INSTALLDIR=/usr/local/robotdriver
+
 if [ $EUID -ne 0 ]
 then
  echo "This script must be run as root" 1>&2
@@ -19,9 +21,11 @@ sudo apt install nodejs
 #install other requirements
 apt install -y git gcc g++ make pigpio
 
-git clone https://github.com/RobotDriver/RobotDriver /usr/local/robotdriver
+git clone https://github.com/RobotDriver/RobotDriver $INSTALLDIR
 
-JSDIR=/usr/local/robotdriver/webroot/inc/js/
+npm install $INSTALLDIR
+
+JSDIR=$INSTALLDIR/webroot/inc/js/
 LIB=ext-6.6-latest
 mkdir -p $JSDIR
 curl -L -o $JSDIR$LIB.zip https://install.robotdriver.dev/$LIB.zip
