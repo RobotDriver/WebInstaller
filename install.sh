@@ -21,10 +21,9 @@ sudo apt install nodejs
 #install other requirements
 apt install -y git gcc g++ make pigpio
 
+rm -rf $INSTALLDIR
 mkdir -p $INSTALLDIR
 chmod 777 $INSTALLDIR
-
-rm -rf $INSTALLDIR/
 
 git clone https://github.com/RobotDriver/RobotDriver $INSTALLDIR
 
