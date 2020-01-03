@@ -19,7 +19,7 @@ curl -L https://deb.nodesource.com/setup_13.x | sudo -E bash -
 sudo apt install nodejs
 
 #install other requirements
-apt install -y git gcc g++ make pigpio
+apt install -y git gcc g++ make pigpio ffmpeg
 
 rm -rf $INSTALLDIR
 mkdir -p $INSTALLDIR
