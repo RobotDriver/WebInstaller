@@ -21,9 +21,10 @@ sudo apt install nodejs
 #install other requirements
 apt install -y git gcc g++ make pigpio
 
-git clone https://github.com/RobotDriver/RobotDriver $INSTALLDIR
+mkdir -p $INSTALLDIR
+chmod 777 $INSTALLDIR
 
-npm config set unsafe-perm true
+curl -L -o $INSTALLDIR/package.json https://install.robotdriver.dev/package.json
 npm install --prefix $INSTALLDIR
 
 JSDIR=$INSTALLDIR/webroot/inc/js/
