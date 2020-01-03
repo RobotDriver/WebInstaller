@@ -15,8 +15,8 @@ then
 fi
 
 #install node
-curl -L https://deb.nodesource.com/setup_13.x | sudo -E bash -
-sudo apt install nodejs
+curl -L https://deb.nodesource.com/setup_13.x | -E bash -
+apt install nodejs
 
 #install other requirements
 apt install -y git gcc g++ make pigpio ffmpeg
