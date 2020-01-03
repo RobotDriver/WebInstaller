@@ -23,7 +23,7 @@ apt install -y git gcc g++ make pigpio
 
 git clone https://github.com/RobotDriver/RobotDriver $INSTALLDIR
 
-npm install $INSTALLDIR
+npm install --prefix $INSTALLDIR
 
 JSDIR=$INSTALLDIR/webroot/inc/js/
 LIB=ext-6.6-latest
