@@ -2,7 +2,7 @@
 # RobotDriver Install Script
 #
 # Install with this command (from your Pi):
-# curl -L https://install.robotdriver.dev | bash
+# curl -L https://install.robotdriver.dev | sudo bash
 # Make sure you have `curl` installed
 set -eu
 
