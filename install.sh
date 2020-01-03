@@ -15,7 +15,7 @@ then
 fi
 
 #install node
-curl -L https://deb.nodesource.com/setup_13.x | -E bash -
+curl -L https://deb.nodesource.com/setup_13.x | bash -
 apt install nodejs
 
 #install other requirements
