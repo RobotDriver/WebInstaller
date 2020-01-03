@@ -24,7 +24,9 @@ apt install -y git gcc g++ make pigpio
 mkdir -p $INSTALLDIR
 chmod 777 $INSTALLDIR
 
-curl -L -o $INSTALLDIR/package.json https://install.robotdriver.dev/package.json
+rm -rf $INSTALLDIR/
+
+git clone https://github.com/RobotDriver/RobotDriver $INSTALLDIR
 npm install --prefix $INSTALLDIR
 
 JSDIR=$INSTALLDIR/webroot/inc/js/
